@@ -1,0 +1,23 @@
+@import './components/variables.scss';
+//components
+@import './components/header.scss';
+@import './components/feature.scss';
+@import './components/banner.scss';
+@import './components/product.scss';
+@import './components/footer.scss';
+
+//reset
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin navLinks {
+    font-size: 16px;
+    padding: 8px 0;
+    text-decoration: none;
+    color: $black;
+    font-weight: 500;
+}

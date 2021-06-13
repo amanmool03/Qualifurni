@@ -1,0 +1,131 @@
+@import '../components/variables.scss';
+
+
+
+
+#header {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    z-index: 10;
+
+    .container-fluid {
+        .row {
+            .header-inner {
+                position: relative;
+                height: 100px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-family: $pr-font;
+
+                .logo {
+                    font-family: $tr-font;
+                    font-size: 22px;
+                    font-weight: 400;
+
+                    @media(max-width: $tablet) {
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+
+                }
+
+                .navigation {
+                    display: flex;
+                    justify-content: center;
+
+
+                    nav {
+                        ul {
+                            display: flex;
+                            align-items: center;
+                            padding: 0;
+                            padding-left: 120px;
+
+                            li {
+                                list-style: none;
+                                margin: 0 40px;
+
+                                @media(max-width: $widescreen) {
+                                    margin: 0 24px;
+
+                                }
+
+                                a {
+                                    font-size: 16px;
+                                    padding: 8px 0;
+                                    text-decoration: none;
+                                    color: $black;
+                                    font-weight: 500;
+
+                                }
+                            }
+
+                            @media(max-width:1000px) {
+                                padding-left: 0;
+                            }
+
+                        }
+
+                        @media(max-width: $tablet) {
+                            display: none;
+                        }
+
+                    }
+                }
+
+                .nav-login {
+                    display: flex;
+                    align-items: center;
+
+                    .login {
+                        a {
+                            font-size: 16px;
+                            color: $black;
+                            text-decoration: none;
+                            font-weight: 500;
+                            margin-right: 40px;
+
+                            @media (max-width:$widescreen) {
+                                margin-right: 12px;
+                            }
+                        }
+                    }
+
+                    .apply {
+                        a {
+                            display: inline-block;
+                            font-size: 16px;
+                            padding: 8px 16px;
+                            text-decoration: none;
+                            color: $black;
+                            border: 2px solid $orange;
+                            border-radius: 20px;
+                            font-weight: 500;
+                            transition: .2s ease-in-out;
+
+                            &:hover {
+                                background-color: $lightOrange;
+                                color: white;
+                                border-color: transparent;
+                            }
+
+                            @media (max-width:$widescreen) {
+                                padding: 8px 16px;
+                            }
+                        }
+                    }
+
+                    @media(max-width: $tablet) {
+                        display: none;
+                    }
+                }
+
+            }
+        }
+
+    }
+}
